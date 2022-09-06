@@ -5,9 +5,12 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-
     <div class="wrapper">
       <HelloWorld msg="You did it! (App.vue)" />
+      <el-alert title="success alert" type="success" />
+      <el-alert title="info alert" type="info" />
+      <el-alert title="warning alert" type="warning" />
+      <el-alert title="error alert" type="error" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
