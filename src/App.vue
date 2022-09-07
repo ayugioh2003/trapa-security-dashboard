@@ -66,8 +66,23 @@ const handleClose = (key: string, keyPath: string[]) => {
       </el-menu>
     </menu>
     <main class="grow">
-      <div class="bg-pink">
-        menu
+      <div
+        class="flex justify-between px-5 pt-1 pb-3 shadow-lg shadow-gray-500/10"
+      >
+        <h1 class="font-bold">SOC Room</h1>
+        <div class="flex gap-5 items-center">
+          <span class="font-semibold text-sm text-gray-500">admin</span>
+          <span
+            ><font-awesome-icon
+              icon="fa-regular fa-bell"
+              :style="{ color: '#999999' }"
+          /></span>
+          <span
+            ><font-awesome-icon
+              icon="fa-solid fa-arrow-right-from-bracket"
+              :style="{ color: '#999999' }"
+          /></span>
+        </div>
       </div>
       <RouterView />
     </main>
