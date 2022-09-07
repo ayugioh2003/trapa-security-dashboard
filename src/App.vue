@@ -121,6 +121,7 @@ const handleClose = (key: string, keyPath: string[]) => {
   @apply flex justify-between px-5 pt-1 pb-3 shadow-lg shadow-gray-500/10 bg-white;
   position: fixed;
   width: calc(100vw - 4rem);
+  z-index: 9999;
 }
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {
@@ -137,5 +138,11 @@ const handleClose = (key: string, keyPath: string[]) => {
     position: absolute;
     bottom: 30px;
   }
+}
+</style>
+
+<style>
+body {
+  background-color: #f5f5f5;
 }
 </style>
