@@ -1,12 +1,12 @@
 <script setup>
 import AIndex from '@/components/action/AIndex.vue'
-import Tindex from '../components/tickets/Tindex.vue'
+import TIndex from '../components/tickets/TIndex.vue'
 </script>
 
 <template>
-  <main class="px-2 flex h-screen pt-5">
-    <AIndex class="w-1/2" />
-    <Tindex class="w-1/2" />
+  <main class="px-3 flex h-screen pt-5">
+    <AIndex class="w-2/5" />
+    <TIndex class="w-3/5" />
   </main>
 </template>
 

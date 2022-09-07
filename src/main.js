@@ -17,6 +17,7 @@ import {
   faCalculator,
   faGraduationCap,
   faSliders,
+  faBars,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faBell,
@@ -34,7 +35,8 @@ library.add(
   faMagnifyingGlass,
   faCalculator,
   faGraduationCap,
-  faSliders
+  faSliders,
+  faBars
 )
 library.add(faBell, faFlag, faAddressCard, faSun, faMoon)
 
