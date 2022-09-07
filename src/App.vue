@@ -14,7 +14,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 <template>
   <div class="app flex">
-    <menu>
+    <menu class="fixed">
       <el-menu
         :collapse="isCollapse"
         active-text-color="#ffd04b"
@@ -92,7 +92,7 @@ const handleClose = (key: string, keyPath: string[]) => {
         </el-menu-item>
       </el-menu>
     </menu>
-    <main class="grow">
+    <main class="grow ml-16">
       <div
         class="flex justify-between px-5 pt-1 pb-3 shadow-lg shadow-gray-500/10"
       >
