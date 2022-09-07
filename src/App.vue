@@ -97,16 +97,18 @@ const handleClose = (key: string, keyPath: string[]) => {
         <h1 class="font-bold">SOC Room</h1>
         <div class="flex gap-5 items-center">
           <span class="font-semibold text-sm text-gray-500">admin</span>
-          <span
-            ><font-awesome-icon
+          <button>
+            <font-awesome-icon
               icon="fa-regular fa-bell"
               :style="{ color: '#999999' }"
-          /></span>
-          <span
-            ><font-awesome-icon
+            />
+          </button>
+          <button>
+            <font-awesome-icon
               icon="fa-solid fa-arrow-right-from-bracket"
               :style="{ color: '#999999' }"
-          /></span>
+            />
+          </button>
         </div>
       </div>
       <main class="mt-10">
@@ -118,7 +120,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 <style scoped lang="scss">
 .top-navbar {
-  @apply flex justify-between px-5 pt-1 pb-3 shadow-lg shadow-gray-500/10 bg-white;
+  @apply flex justify-between px-7 pt-1 pb-3 shadow-lg shadow-gray-500/10 bg-white;
   position: fixed;
   width: calc(100vw - 4rem);
   z-index: 9999;
