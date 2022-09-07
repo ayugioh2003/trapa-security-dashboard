@@ -92,10 +92,8 @@ const handleClose = (key: string, keyPath: string[]) => {
         </el-menu-item>
       </el-menu>
     </menu>
-    <main class="grow ml-16">
-      <div
-        class="flex justify-between px-5 pt-1 pb-3 shadow-lg shadow-gray-500/10"
-      >
+    <section class="grow ml-16">
+      <div class="top-navbar">
         <h1 class="font-bold">SOC Room</h1>
         <div class="flex gap-5 items-center">
           <span class="font-semibold text-sm text-gray-500">admin</span>
@@ -111,12 +109,20 @@ const handleClose = (key: string, keyPath: string[]) => {
           /></span>
         </div>
       </div>
-      <RouterView />
-    </main>
+      <main class="mt-10">
+        <RouterView />
+      </main>
+    </section>
   </div>
 </template>
 
 <style scoped lang="scss">
+.top-navbar {
+  @apply flex justify-between px-5 pt-1 pb-3 shadow-lg shadow-gray-500/10 bg-white;
+  position: fixed;
+  width: calc(100vw - 4rem);
+}
+
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: calc(100vw / 24);
   min-height: 100vh;
