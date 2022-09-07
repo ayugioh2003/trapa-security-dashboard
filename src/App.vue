@@ -1,13 +1,8 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from 'vue'
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
-} from '@element-plus/icons-vue'
 const isCollapse = ref(true)
+const isDark = ref(true)
 
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
@@ -30,37 +25,69 @@ const handleClose = (key: string, keyPath: string[]) => {
         @open="handleOpen"
         @close="handleClose"
       >
-        <el-sub-menu index="1">
-          <template #title>
-            <el-icon><location /></el-icon>
-            <span>Navigator One</span>
-          </template>
-          <el-menu-item-group title="Group One">
-            <el-menu-item index="1-1">item one</el-menu-item>
-            <el-menu-item index="1-2">item two</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group title="Group Two">
-            <el-menu-item index="1-3">item three</el-menu-item>
-          </el-menu-item-group>
-          <el-sub-menu index="1-4">
-            <template #title>item four</template>
-            <el-menu-item index="1-4-1">item one</el-menu-item>
-          </el-sub-menu>
-        </el-sub-menu>
+        <el-menu-item index="1" disabled>
+          <el-icon><font-awesome-icon icon="fa-regular fa-flag" /></el-icon>
+          <span>Navigator One</span>
+        </el-menu-item>
         <el-menu-item index="2">
-          <el-icon><icon-menu /></el-icon>
+          <el-icon><font-awesome-icon icon="fa-solid fa-house" /></el-icon>
           <span>Navigator Two</span>
         </el-menu-item>
-        <el-menu-item index="3" disabled>
-          <el-icon><document /></el-icon>
+        <el-menu-item index="3">
+          <el-icon
+            ><font-awesome-icon icon="fa-solid fa-chart-column"
+          /></el-icon>
           <span>Navigator Three</span>
         </el-menu-item>
         <el-menu-item index="4">
-          <el-icon><setting /></el-icon>
+          <el-icon
+            ><font-awesome-icon icon="fa-solid fa-magnifying-glass"
+          /></el-icon>
           <span>Navigator Four</span>
         </el-menu-item>
-        <el-menu-item index="5" class="sidebar-fixend">
-          <el-icon><setting /></el-icon>
+        <el-menu-item index="5">
+          <el-icon><font-awesome-icon icon="fa-solid fa-calculator" /></el-icon>
+          <span>Navigator Five</span>
+        </el-menu-item>
+        <el-menu-item index="6">
+          <el-icon
+            ><font-awesome-icon icon="fa-solid fa-graduation-cap"
+          /></el-icon>
+          <span>Navigator Five</span>
+        </el-menu-item>
+        <el-menu-item index="7">
+          <el-icon
+            ><font-awesome-icon icon="fa-regular fa-address-card"
+          /></el-icon>
+          <span>Navigator Five</span>
+        </el-menu-item>
+        <el-menu-item index="8">
+          <el-icon
+            ><font-awesome-icon icon="fa-solid fa-sliders" rotation="270"
+          /></el-icon>
+          <span>Navigator Five</span>
+        </el-menu-item>
+
+        <el-menu-item index="99" class="sidebar-fixend">
+          <div>
+            <el-icon v-if="isDark"
+              ><font-awesome-icon icon="fa-regular fa-sun"
+            /></el-icon>
+            <el-icon v-else
+              ><font-awesome-icon icon="fa-regular fa-moon"
+            /></el-icon>
+            <div>
+              <el-switch
+                v-model="isDark"
+                size="small"
+                style="
+                  --el-switch-on-color: #13ce66;
+                  --el-switch-off-color: #999999;
+                "
+              />
+            </div>
+          </div>
+
           <span>Navigator Five</span>
         </el-menu-item>
       </el-menu>
@@ -102,7 +129,7 @@ const handleClose = (key: string, keyPath: string[]) => {
   /* position: relative; */
   .sidebar-fixend {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
   }
 }
 </style>

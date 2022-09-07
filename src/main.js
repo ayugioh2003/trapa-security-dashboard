@@ -11,10 +11,32 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
   faUserSecret,
   faArrowRightFromBracket,
+  faHouse,
+  faChartColumn,
+  faMagnifyingGlass,
+  faCalculator,
+  faGraduationCap,
+  faSliders,
 } from '@fortawesome/free-solid-svg-icons'
-import { faBell } from '@fortawesome/free-regular-svg-icons'
+import {
+  faBell,
+  faFlag,
+  faAddressCard,
+  faSun,
+  faMoon,
+} from '@fortawesome/free-regular-svg-icons'
 /* add icons to the library */
-library.add(faUserSecret, faArrowRightFromBracket, faBell)
+library.add(
+  faUserSecret,
+  faArrowRightFromBracket,
+  faHouse,
+  faChartColumn,
+  faMagnifyingGlass,
+  faCalculator,
+  faGraduationCap,
+  faSliders
+)
+library.add(faBell, faFlag, faAddressCard, faSun, faMoon)
 
 import App from './App.vue'
 import router from './router'
